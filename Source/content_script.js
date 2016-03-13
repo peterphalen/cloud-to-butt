@@ -28,12 +28,7 @@ function replaceText(v)
     
     //children  of illegal immigrant -> human children
     v = v.replace(/\b(children|Children) of (Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human $1 of $2$3");
-    
-    //illegal immigrant -> human
-    v = v.replace(/\bIllegal Immigrant(s)?\b/g, "human$1 (here referred to as 'Illegal Immigrant$1')");
-    v = v.replace(/\bIllegal immigrant(s)?\b/g, "human$1 (here referred to as 'Illegal immigrant$1')");
-    v = v.replace(/\billegal Immigrant(s)?\b/g, "human$1 (here referred to as 'illegal Immigrant$1')");
-    v = v.replace(/\billegal immigrant(s)?\b/g, "human$1 (here referred to as 'illegal immigrant$1')");
+
     
     //illegal alien -> human
     v = v.replace(/\bIllegal Alien(s)?\b/g, "human$1 (here referred to as 'Illegal Alien$1')");
