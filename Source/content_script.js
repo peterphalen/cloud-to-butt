@@ -36,6 +36,12 @@ function replaceText(v)
     //illegal immigrant -> human
     v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 (here referred to as '$1$2')");
     
+    //thug -> black person i am afraid of
+    v = v.replace(/\bDangerous thug\b/g, "Black person");
+    v = v.replace(/\bdangerous thug\b/g, "black person");
+    v = v.replace(/\bDangerous thugs\b/g, "Black people");
+    v = v.replace(/\bdangerous thugs\b/g, "black people");
+
 	
 	return v;
 }
