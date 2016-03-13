@@ -23,19 +23,12 @@ function handleText(textNode) {
 function replaceText(v)
 {
     
-    //children of illegal alien -> human children
-    v = v.replace(/\b(children|Children) of (Illegal Alien|Illegal alien|illegal Alien|illegal alien)(s)?\b/g, "human $1 of $2$3");
-    
-    //children  of illegal immigrant -> human children
-    v = v.replace(/\b(children|Children) of (Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human $1 of $2$3");
-
-    
     //illegal alien -> human
-    v = v.replace(/\b(Illegal Alien|Illegal alien|illegal Alien|illegal alien)(s)?\b/g, "human$2 (here referred to as '$1$2')");
+    v = v.replace(/\b(Illegal Alien|Illegal alien|illegal Alien|illegal alien)(s)?\b/g, "human$2 ('$1$2')");
     
     //illegal immigrant -> human
-    v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 (here referred to as '$1$2')");
-    
+    v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 ('$1$2')");
+        
     //thug -> black person i am afraid of
     v = v.replace(/\bDangerous thug\b/g, "Black person");
     v = v.replace(/\bdangerous thug\b/g, "black person");
