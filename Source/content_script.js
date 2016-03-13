@@ -36,10 +36,10 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
     
-    v = v.replace(/\bIllegal Alien\b/g, "Human being (here referred to as 'Illegal Alien");
-	v = v.replace(/\bIllegal alien\b/g, "Human being (here referred to as 'Illegal alien");
-	v = v.replace(/\billegal Alien\b/g, "Human being (here referred to as 'illegal Alien");
-	v = v.replace(/\billegal alien\b/g, "Human being (here referred to as 'illegal alien");
+    v = v.replace(/\bIllegal Alien\b/g, "Human being (here referred to as 'Illegal Alien')");
+	v = v.replace(/\bIllegal alien\b/g, "Human being (here referred to as 'Illegal alien')");
+	v = v.replace(/\billegal Alien\b/g, "Human being (here referred to as 'illegal Alien')");
+	v = v.replace(/\billegal alien\b/g, "Human being (here referred to as 'illegal alien')");
 	
 	textNode.nodeValue = v;
 }
