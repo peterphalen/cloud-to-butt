@@ -23,10 +23,16 @@ function handleText(textNode) {
 function replaceText(v)
 {
     //illegal alien -> human being
-    v = v.replace(/\bIllegal Alien(s)?\b/g, "Human being$1 (here referred to as 'Illegal Alien$')");
-	v = v.replace(/\bIllegal alien(s)?\b/g, "Human being$1 (here referred to as 'Illegal alien$')");
-	v = v.replace(/\billegal Alien(s)?\b/g, "Human being$1 (here referred to as 'illegal Alien$')");
-	v = v.replace(/\billegal alien(s)?\b/g, "Human being$1 (here referred to as 'illegal alien$')");
+    v = v.replace(/\bIllegal Alien(s)?\b/g, "Human being$1 (here referred to as 'Illegal Alien$1')");
+	v = v.replace(/\bIllegal alien(s)?\b/g, "Human being$1 (here referred to as 'Illegal alien$1')");
+	v = v.replace(/\billegal Alien(s)?\b/g, "Human being$1 (here referred to as 'illegal Alien$1')");
+	v = v.replace(/\billegal alien(s)?\b/g, "Human being$1 (here referred to as 'illegal alien$1')");
+    
+    //illegal immigrant -> human being
+    v = v.replace(/\bIllegal Immigrant(s)?\b/g, "Human being$1 (here referred to as 'Illegal Immigrant$1')");
+    v = v.replace(/\bIllegal immigrant(s)?\b/g, "Human being$1 (here referred to as 'Illegal immigrant$1')");
+    v = v.replace(/\billegal Immigrant(s)?\b/g, "Human being$1 (here referred to as 'illegal Immigrant$1')");
+    v = v.replace(/\billegal immigrant(s)?\b/g, "Human being$1 (here referred to as 'illegal immigrant$1')");
 	
 	return v;
 }
