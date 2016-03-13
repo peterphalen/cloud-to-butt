@@ -28,12 +28,28 @@ function replaceText(v)
     
     //illegal immigrant -> human
     v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 ('$1$2')");
-        
+    
+    
     //thug -> black person i am afraid of
+    ///NOTE THESE QUOTATIONS AREN'T REGISTERED CORRECTLY
+    v = v.replace(/\bDangerous Thug\b/g, "Black Person");
     v = v.replace(/\bDangerous thug\b/g, "Black person");
+    v = v.replace(/\bdangerous Thug\b/g, "black Person");
     v = v.replace(/\bdangerous thug\b/g, "black person");
+    v = v.replace(/\bDangerous Thugs\b/g, "Black People");
     v = v.replace(/\bDangerous thugs\b/g, "Black people");
+    v = v.replace(/\bdangerous Thugs\b/g, "black People");
     v = v.replace(/\bdangerous thugs\b/g, "black people");
+    
+    v = v.replace(/\bOrganized Thug\b/g, "Organized Black Person");
+    v = v.replace(/\bOrganized thug\b/g, "Organized Black person");
+    v = v.replace(/\borganized Thug\b/g, "organized black Person");
+    v = v.replace(/\borganized thug\b/g, "organized black person");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized thugs\b/g, "Organized Black people");
+    v = v.replace(/\borganized Thugs\b/g, "organized black People");
+    v = v.replace(/\borganized thugs\b/g, "organized black people");
+
 
 	
 	return v;
