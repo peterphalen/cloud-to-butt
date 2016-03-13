@@ -1,8 +1,8 @@
 {
-	"manifest_version": 2,
-	"name": "Cloud To Butt",
+	"manifest_version": 1,
+	"name": "Humanizer",
 	"version": "1.0",
-	"description": "Replaces the text 'the cloud' with 'my butt'.",
+	"description": "Chrome extension that replaces words and phrases that are commonly used to dehumanize people with words that are more humanizing.",
 	"content_scripts": 
 	[
 		{
