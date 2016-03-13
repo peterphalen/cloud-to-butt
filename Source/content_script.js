@@ -36,9 +36,6 @@ function replaceText(v)
     //illegal immigrant -> human
     v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 (here referred to as '$1$2')");
     
-    //illegals -> humans
-    v = v.replace(/\b(Illegal|illegal)(s)?\b/g, "human$2 (here referred to as '$1$2')");
-    
 	
 	return v;
 }
