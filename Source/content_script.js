@@ -29,6 +29,15 @@ function replaceText(v)
     //illegal immigrant -> human
     v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 ('$1$2')");
     
+    //undocumented immigrant -> human
+    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|undocumented Immigrant|undocumented immigrant)(s)?\b/g, "human$2 ('$1$2')");
+    
+    //illegal immigration -> humans trying to build a better life
+    v = v.replace(/\bIllegal Immigration\b/g, "Humans trying to build a better life for themselves");
+    v = v.replace(/\bIllegal immigration\b/g, "Humans trying to build a better life for themselves");
+    v = v.replace(/\billegal immigration\b/g, "humans trying to build a better life for themselves");
+    v = v.replace(/\billegal Immigration\b/g, "humans trying to build a better life for themselves");
+
     
     //thug -> black person i am afraid of
     ///NOTE THESE QUOTATIONS AREN'T REGISTERED CORRECTLY

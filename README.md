@@ -12,9 +12,12 @@ Chrome extension that replaces words and phrases that are commonly used to dehum
 
 ### Screenshots
 #### dehumanized
-![](dehumanized.png)
+![](dehumanizedImmigration.png)
 #### humanized
-![](humanized.png)
-
+![](humanizedImmigration.png)
+#### dehumanized
+![](dehumanizedDangerousThugs.png)
+#### humanized
+![](humanizedDangerousThugs.png)
 
 
