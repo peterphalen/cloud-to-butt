@@ -31,16 +31,13 @@ function replaceText(v)
 
     
     //illegal alien -> human
-    v = v.replace(/\bIllegal Alien(s)?\b/g, "human$1 (here referred to as 'Illegal Alien$1')");
-	v = v.replace(/\bIllegal alien(s)?\b/g, "human$1 (here referred to as 'Illegal alien$1')");
-	v = v.replace(/\billegal Alien(s)?\b/g, "human$1 (here referred to as 'illegal Alien$1')");
-	v = v.replace(/\billegal alien(s)?\b/g, "human$1 (here referred to as 'illegal alien$1')");
+    v = v.replace(/\b(Illegal Alien|Illegal alien|illegal Alien|illegal alien)(s)?\b/g, "human$2 (here referred to as '$1$2')");
     
     //illegal immigrant -> human
-    v = v.replace(/\bIllegal Immigrant(s)?\b/g, "human$1 (here referred to as 'Illegal Immigrant$1')");
-    v = v.replace(/\bIllegal immigrant(s)?\b/g, "human$1 (here referred to as 'Illegal immigrant$1')");
-    v = v.replace(/\billegal Immigrant(s)?\b/g, "human$1 (here referred to as 'illegal Immigrant$1')");
-    v = v.replace(/\billegal immigrant(s)?\b/g, "human$1 (here referred to as 'illegal immigrant$1')");
+    v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 (here referred to as '$1$2')");
+    
+    //illegals -> humans
+    v = v.replace(/\b(Illegal|illegal)(s)?\b/g, "human$2 (here referred to as '$1$2')");
     
 	
 	return v;
