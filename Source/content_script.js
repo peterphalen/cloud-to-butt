@@ -25,8 +25,13 @@ function replaceText(v)
     
 
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
-    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|undocumented Immigrant|undocumented immigrant|Illegal Alien|Illegal alien|illegal Alien|illegal alien|Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)\b/g, "human trying to build a better life");
-    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|undocumented Immigrants|undocumented immigrants|Illegal Aliens|Illegal aliens|illegal Aliens|illegal aliens|Illegal Immigrants|Illegal immigrants|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
+    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|Illegal Aliens|Illegal aliens||Illegal Immigrants|Illegal immigrants)\b/g, "Human trying to build a better life");
+    v = v.replace(/\b(undocumented Immigrant|undocumented immigrant|illegal Alien|illegal alien|illegal Immigrant|illegal immigrant)\b/g, "human trying to build a better life");
+    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|Illegal Aliens|Illegal aliens||Illegal Immigrants|Illegal immigrants)\b/g, "Humans trying to build a better life for themselves");
+    v = v.replace(/\b(undocumented Immigrants|undocumented immigrants|illegal Aliens|illegal aliens|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
+    
+    //illegals->humans
+    v = v.replace(/\b(Illegals|illegals)\b/g, "humans");
     
     
     //illegal immigration -> humans trying to build a better life
