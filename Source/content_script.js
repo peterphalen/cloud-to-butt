@@ -23,24 +23,22 @@ function handleText(textNode) {
 function replaceText(v)
 {
     
-    //illegal alien -> human
-    v = v.replace(/\b(Illegal Alien|Illegal alien|illegal Alien|illegal alien)(s)?\b/g, "human$2 ('$1$2')");
+
+    //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
+    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|undocumented Immigrant|undocumented immigrant|Illegal Alien|Illegal alien|illegal Alien|illegal alien|Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)\b/g, "human trying to build a better life");
+    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|undocumented Immigrants|undocumented immigrants|Illegal Aliens|Illegal aliens|illegal Aliens|illegal aliens|Illegal Immigrants|Illegal immigrants|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
     
-    //illegal immigrant -> human
-    v = v.replace(/\b(Illegal Immigrant|Illegal immigrant|illegal Immigrant|illegal immigrant)(s)?\b/g, "human$2 ('$1$2')");
-    
-    //undocumented immigrant -> human
-    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|undocumented Immigrant|undocumented immigrant)(s)?\b/g, "human$2 ('$1$2')");
     
     //illegal immigration -> humans trying to build a better life
-    v = v.replace(/\bIllegal Immigration\b/g, "Humans trying to build a better life for themselves");
-    v = v.replace(/\bIllegal immigration\b/g, "Humans trying to build a better life for themselves");
-    v = v.replace(/\billegal immigration\b/g, "humans trying to build a better life for themselves");
-    v = v.replace(/\billegal Immigration\b/g, "humans trying to build a better life for themselves");
+    v = v.replace(/\bIllegal Immigration\b/g, "Humans trying to build better lives for themselves");
+    v = v.replace(/\bIllegal immigration\b/g, "Humans trying to build better lives for themselves");
+    v = v.replace(/\billegal immigration\b/g, "humans trying to build better lives for themselves");
+    v = v.replace(/\billegal Immigration\b/g, "humans trying to build better lives for themselves");
 
     
     //thug -> black person i am afraid of
-    ///NOTE THESE QUOTATIONS AREN'T REGISTERED CORRECTLY
+    ///NOTE: NEED TO MAKE THESE WORDS RECOGNIZE WHEN ONLY ONE IS IN QUOTES (e.g. Dangerous "thugs")
+    ///This formatting occurs the most frequently
     v = v.replace(/\bDangerous Thug\b/g, "Black Person");
     v = v.replace(/\bDangerous thug\b/g, "Black person");
     v = v.replace(/\bdangerous Thug\b/g, "black Person");

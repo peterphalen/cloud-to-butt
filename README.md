@@ -6,7 +6,7 @@ humanizer
 Chrome extension that replaces words and phrases that are commonly used to dehumanize people, with words that are more humanizing.
 
 ### Decode the American language!
-- Illegal alien -> human
+- Illegal alien -> human trying to build a better life
 - "Dangerous thug" -> black person
 - "Organized thugs" -> organized black people 
 
