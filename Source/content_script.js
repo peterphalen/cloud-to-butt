@@ -20,8 +20,11 @@ function handleText(textNode) {
     textNode.nodeValue = replaceText(textNode.nodeValue);
 }
 
+
 function replaceText(v)
 {
+    //Note: preservation of specific capitalization patterns is unusually important for this app because so many of these replacements occur in headlines
+    
     
     //illegals -> humans
     v = v.replace(/\bIllegals\b/g, "Humans");
