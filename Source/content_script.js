@@ -33,6 +33,7 @@ function replaceText(v)
     
     
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
+    //ignore case of first letter second words
     v = v.replace(/\b(Undocumented [Ii]mmigrant|Illegal [Aa]lien|Illegal [Ii]mmigrant)\b/g, "Person trying to build a better life");
     v = v.replace(/\b(undocumented [Ii]mmigrant|illegal [Aa]lien|illegal [Ii]mmigrant)\b/g, "person trying to build a better life");
     v = v.replace(/\b(Undocumented [Ii]mmigrants|Illegal [Aa]liens|Illegal [Ii]mmigrants)\b/g, "Humans trying to build a better life for themselves");
@@ -54,6 +55,8 @@ function replaceText(v)
     v = v.replace(/\bdangerous thugs\b/i, "Black People Who I Am Afraid Of");
 
     //Here we target occurences of the form: Dangerous "thug."
+    // \S picks any non-white-space character
+    // must drop \b because punctuation is not recognized as part of a word
     v = v.replace(/\bDangerous \SThug[,\.]\S/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \S[Tt]hug[,\.]\S/g, "Black person who I am afraid of");
@@ -75,6 +78,7 @@ function replaceText(v)
     v = v.replace(/\bdangerous \Sthugs\S/i, "Black People Who I Am Afraid Of");
     
     //Organized thugs -> organized/organised black people
+    //maintain spelling (organized v. organised)
     v = v.replace(/\bOrgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
     v = v.replace(/\bOrgani(z|s)?ed thugs\b/g, "Organi$1ed Black People");
     v = v.replace(/\borgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
