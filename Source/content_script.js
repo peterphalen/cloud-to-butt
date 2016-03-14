@@ -53,6 +53,13 @@ function replaceText(v)
     v = v.replace(/\bdangerous Thugs\b/g, "black People Who I am afraid of");
     v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
     
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    
+    
+    //everything above works great. the following two blocks do not.
     v = v.replace(/\bOrganized .Thugs[,\.].\b/g, "Organized Black People");
     v = v.replace(/\bOrganized .thug[,\.].\b/g, "Organized Black people");
     v = v.replace(/\borganized .Thugs[,\.].\b/g, "organized Black People");
@@ -62,11 +69,7 @@ function replaceText(v)
     v = v.replace(/\bOrganized .thugs['""”]\b/g, "Organized black people");
     v = v.replace(/\borganized .Thugs['""”]\b/g, "organized Black People");
     v = v.replace(/\borganized .thugs['""”]\b/g, "organized black people");
-                                      
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+
                   
     return v;
 }
