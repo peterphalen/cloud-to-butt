@@ -16,6 +16,8 @@ Chrome extension that replaces words/phrases that are predictably used to dehuma
 ![](dehumanizedImmigration.png)
 #### humanized
 ![](humanizedImmigration.png)
+
+
 #### dehumanized
 ![](dehumanizedDangerousThugs.png)
 #### humanized

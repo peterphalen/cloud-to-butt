@@ -23,15 +23,16 @@ function handleText(textNode) {
 function replaceText(v)
 {
     
-    
-    //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
-    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|Illegal Alien|Illegal alien|Illegal Immigrant|Illegal immigrant)\b/g, "Human trying to build a better life");
-    v = v.replace(/\b(undocumented Immigrant|undocumented immigrant|illegal Alien|illegal alien|illegal Immigrant|illegal immigrant)\b/g, "human trying to build a better life");
-    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|Illegal Aliens|Illegal aliens|Illegal Immigrants|Illegal immigrants)\b/g, "Humans trying to build a better life for themselves");
-    v = v.replace(/\b(undocumented Immigrants|undocumented immigrants|illegal Aliens|illegal aliens|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
-    
+    //illegals -> humans
     v = v.replace(/\bIllegals\b/g, "Humans");
     v = v.replace(/\billegals\b/g, "humans");
+    
+    
+    //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
+    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|Illegal Alien|Illegal alien|Illegal Immigrant|Illegal immigrant)\b/g, "Person trying to build a better life");
+    v = v.replace(/\b(undocumented Immigrant|undocumented immigrant|illegal Alien|illegal alien|illegal Immigrant|illegal immigrant)\b/g, "person trying to build a better life");
+    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|Illegal Aliens|Illegal aliens|Illegal Immigrants|Illegal immigrants)\b/g, "Humans trying to build a better life for themselves");
+    v = v.replace(/\b(undocumented Immigrants|undocumented immigrants|illegal Aliens|illegal aliens|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
     
     
     //illegal immigration -> humans trying to build a better life
@@ -41,7 +42,7 @@ function replaceText(v)
     v = v.replace(/\billegal Immigration\b/g, "humans trying to build better lives for themselves");
 
     
-    //dangerous thug -> black person i am afraid of
+    //dangerous thug -> black person who i am afraid of
     v = v.replace(/\bDangerous Thug\b/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous thug\b/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous Thug\b/g, "black Person who I Am Afraid Of");
@@ -50,25 +51,10 @@ function replaceText(v)
     v = v.replace(/\bDangerous thugs\b/g, "Black people who I am afraid of");
     v = v.replace(/\bdangerous Thugs\b/g, "black People Who I am afraid of");
     v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
-    //clean up remaining cases with a case-insensitive regex call
+    //clean up remaining occurrences with a case-insensitive regex call
     v = v.replace(/\bdangerous thugs\b/i, "Black People Who I Am Afraid Of");
-    
-    v = v.replace(/\bOrgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
-    v = v.replace(/\bOrgani(z|s)?ed thugs\b/g, "Organi$1ed Black People");
-    v = v.replace(/\borgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
-    v = v.replace(/\borgani(z|s)?ed thugs\b/g, "Organi$1ed Black People");
-    //clean up remaining cases with a case-insensitive regex call
-    v = v.replace(/\borgani(z|s)?ed thugs\b/i, "Organi$1ed Black People");
 
-    
-    //here we target cases like: Organi(z|s)ed "thugs."
-    v = v.replace(/\bOrgani(z|s)?ed \SThugs[,\.]\S/g, "Organi$1ed Black People");
-    v = v.replace(/\bOrgani(z|s)?ed \Sthugs[,\.]\S/g, "Organi$1ed Black people");
-    v = v.replace(/\borgani(z|s)?ed \SThugs[,\.]\S/g, "organi$1ed Black People");
-    v = v.replace(/\borgani(z|s)?ed \Sthugs[,\.]\S/g, "organi$1ed black people");
-    //clean up remaining cases with a case-insensitive regex call
-    v = v.replace(/\borgani(z|s)?ed \Sthugs[,\.]\S/i, "Organi$1ed Black People");
-
+    //Here we target cases of the form: Dangerous "thug"
     v = v.replace(/\bDangerous \SThug[,\.]\S/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
@@ -77,17 +63,8 @@ function replaceText(v)
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
     v = v.replace(/\bdangerous \Sthug[,\.]\S/g, "black person who I am afraid of");
-    //clean up remaining cases with a case-insensitive regex call
-    v = v.replace(/\bdangerous \Sthug[,\.]\S/i, "Black Person Who I Am Afraid Of");
-
-    //here we target cases like: Organi(z|s)ed "thugs"
-    v = v.replace(/\bOrgani(z|s)?ed \SThugs\S/g, "Organi$1ed Black People");
-    v = v.replace(/\bOrgani(z|s)?ed \Sthugs\S/g, "Organi$1ed black people");
-    v = v.replace(/\borgani(z|s)?ed \SThugs\S/g, "organi$1ed Black People");
-    v = v.replace(/\borgani(z|s)?ed \Sthugs\S/g, "organi$1ed black people");
-    //clean up remaining cases with a case-insensitive regex call
-    v = v.replace(/\borgani(z|s)?ed \Sthugs\S/i, "Organi$1ed Black People");
-
+    
+    //Here we target cases of the form: Dangerous "thugs."
     v = v.replace(/\bDangerous \SThug\b/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug\b/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \SThug\b/g, "black Person who I Am Afraid Of");
@@ -96,10 +73,40 @@ function replaceText(v)
     v = v.replace(/\bDangerous \Sthugs\S/g, "Black people who I am afraid of");
     v = v.replace(/\bdangerous \SThugs\S/g, "black People Who I am afraid of");
     v = v.replace(/\bdangerous \Sthugs\S/g, "black people who I am afraid of");
-    //clean up remaining cases with a case-insensitive regex call
+    //clean up remaining occurrences with a case-insensitive regex call
     v = v.replace(/\bdangerous \Sthugs\S/i, "Black People Who I Am Afraid Of");
+    
+    //clean up remaining occurrences with a case-insensitive regex call
+    v = v.replace(/\bdangerous \Sthug[,\.]\S/i, "Black Person Who I Am Afraid Of");
 
-
+    
+    //Organized thugs -> organized/organised black people
+    v = v.replace(/\bOrgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(z|s)?ed thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)?ed Thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)?ed thugs\b/g, "Organi$1ed Black People");
+    
+    //clean up remaining occurrences of this form with a case-insensitive regex call
+    v = v.replace(/\borgani(z|s)?ed thugs\b/i, "Organi$1ed Black People");
+    
+    
+    //here we target cases like: Organi(z|s)ed "thugs."
+    v = v.replace(/\bOrgani(z|s)?ed \SThugs[,\.]\S/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(z|s)?ed \Sthugs[,\.]\S/g, "Organi$1ed Black people");
+    v = v.replace(/\borgani(z|s)?ed \SThugs[,\.]\S/g, "organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)?ed \Sthugs[,\.]\S/g, "organi$1ed black people");
+    
+    //clean up remaining occurrences of this form with a case-insensitive regex call
+    v = v.replace(/\borgani(z|s)?ed \Sthugs[,\.]\S/i, "Organi$1ed Black People");
+    
+    //here we target cases like: Organi(z|s)ed "thugs"
+    v = v.replace(/\bOrgani(z|s)?ed \SThugs\S/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(z|s)?ed \Sthugs\S/g, "Organi$1ed black people");
+    v = v.replace(/\borgani(z|s)?ed \SThugs\S/g, "organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)?ed \Sthugs\S/g, "organi$1ed black people");
+    
+    //clean up remaining occurrences with a case-insensitive regex call
+    v = v.replace(/\borgani(z|s)?ed \Sthugs\S/i, "Organi$1ed Black People");
     
     return v;
 }
