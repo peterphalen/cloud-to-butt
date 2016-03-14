@@ -23,7 +23,8 @@ function handleText(textNode) {
 
 function replaceText(v)
 {
-    //Note: preservation of specific capitalization patterns is unusually important for this app because so many of these replacements occur in headlines
+    //Note: preservation of specific capitalization patterns is unusually important for this app because so
+    //many of these text replacements occur within headlines
     
     
     //illegals -> humans
@@ -32,49 +33,40 @@ function replaceText(v)
     
     
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
-    v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|Illegal Alien|Illegal alien|Illegal Immigrant|Illegal immigrant)\b/g, "Person trying to build a better life");
-    v = v.replace(/\b(undocumented Immigrant|undocumented immigrant|illegal Alien|illegal alien|illegal Immigrant|illegal immigrant)\b/g, "person trying to build a better life");
-    v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|Illegal Aliens|Illegal aliens|Illegal Immigrants|Illegal immigrants)\b/g, "Humans trying to build a better life for themselves");
-    v = v.replace(/\b(undocumented Immigrants|undocumented immigrants|illegal Aliens|illegal aliens|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
+    v = v.replace(/\b(Undocumented [Ii]mmigrant|Illegal [Aa]lien|Illegal [Ii]mmigrant)\b/g, "Person trying to build a better life");
+    v = v.replace(/\b(undocumented [Ii]mmigrant|illegal [Aa]lien|illegal [Ii]mmigrant)\b/g, "person trying to build a better life");
+    v = v.replace(/\b(Undocumented [Ii]mmigrants|Illegal [Aa]liens|Illegal [Ii]mmigrants)\b/g, "Humans trying to build a better life for themselves");
+    v = v.replace(/\b(undocumented [Ii]mmigrants|illegal [Aa]liens|illegal [Ii]mmigrants)\b/g, "humans trying to build a better life for themselves");
     
     
     //illegal immigration -> humans trying to build a better life
-    v = v.replace(/\bIllegal Immigration\b/g, "Humans trying to build better lives for themselves");
-    v = v.replace(/\bIllegal immigration\b/g, "Humans trying to build better lives for themselves");
-    v = v.replace(/\billegal immigration\b/g, "humans trying to build better lives for themselves");
-    v = v.replace(/\billegal Immigration\b/g, "humans trying to build better lives for themselves");
-
+    v = v.replace(/\bIllegal [Ii]mmigration\b/g, "Humans trying to build better lives for themselves");
+    v = v.replace(/\billegal [Ii]mmigration\b/g, "humans trying to build better lives for themselves");
     
     //dangerous thug -> black person who i am afraid of
     v = v.replace(/\bDangerous Thug\b/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous thug\b/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous Thug\b/g, "black Person who I Am Afraid Of");
-    v = v.replace(/\bdangerous thug\b/g, "black person who I am afraid of");
+    v = v.replace(/\bdangerous [Tt]hug\b/g, "black person who I am afraid of");
     v = v.replace(/\bDangerous Thugs\b/g, "Black People Who I Am Afraid Of");
     v = v.replace(/\bDangerous thugs\b/g, "Black people who I am afraid of");
-    v = v.replace(/\bdangerous Thugs\b/g, "black People Who I am afraid of");
-    v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
+    v = v.replace(/\bdangerous [Tt]hugs\b/g, "black people who I am afraid of");
     //clean up remaining occurrences with a case-insensitive regex call
     v = v.replace(/\bdangerous thugs\b/i, "Black People Who I Am Afraid Of");
 
-    //Here we target cases of the form: Dangerous "thug"
+    //Here we target occurences of the form: Dangerous "thug."
     v = v.replace(/\bDangerous \SThug[,\.]\S/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
-    v = v.replace(/\bdangerous \Sthug[,\.]\S/g, "black person who I am afraid of");
+    v = v.replace(/\bdangerous \S[Tt]hug[,\.]\S/g, "Black person who I am afraid of");
     v = v.replace(/\bDangerous \SThug[,\.]\S/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
-    v = v.replace(/\bdangerous \Sthug[,\.]\S/g, "black person who I am afraid of");
     //clean up remaining occurrences of this form with a case-insensitive regex call
     v = v.replace(/\bdangerous \Sthug[,\.]\S/i, "Black Person Who I Am Afraid Of");
 
     
-    //Here we target cases of the form: Dangerous "thugs."
-    v = v.replace(/\bDangerous \SThug\b/g, "Black Person Who I Am Afraid Of");
-    v = v.replace(/\bDangerous \Sthug\b/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous \SThug\b/g, "black Person who I Am Afraid Of");
-    v = v.replace(/\bdangerous \Sthug\b/g, "black person who I am afraid of");
+    //Here we target cases of the form: Dangerous "thugs"
+    v = v.replace(/\bDangerous \SThug\S\b/g, "Black Person Who I Am Afraid Of");
+    v = v.replace(/\bDangerous \Sthug\S\b/g, "Black person who I am afraid of");
+    v = v.replace(/\bdangerous \S[Tt]hug\S\b/g, "black person who I am afraid of");
     v = v.replace(/\bDangerous \SThugs\S/g, "Black People Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthugs\S/g, "Black people who I am afraid of");
     v = v.replace(/\bdangerous \SThugs\S/g, "black People Who I am afraid of");
