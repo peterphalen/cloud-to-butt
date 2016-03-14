@@ -53,16 +53,16 @@ function replaceText(v)
     v = v.replace(/\bdangerous Thugs\b/g, "black People Who I am afraid of");
     v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
     
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrgani(z|s)ed Thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(z|s)ed thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)ed Thugs\b/g, "Organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)ed thugs\b/g, "Organi$1ed Black People");
     
-    //here we target cases like: Organized "thugs."
-    v = v.replace(/\bOrganized \SThugs[,\.]\S/g, "Organized Black People");
-    v = v.replace(/\bOrganized \Sthugs[,\.]\S/g, "Organized Black people");
-    v = v.replace(/\borganized \SThugs[,\.]\S/g, "organized Black People");
-    v = v.replace(/\borganized \Sthugs[,\.]\S/g, "organized black people");
+    //here we target cases like: Organi(z|s)ed "thugs."
+    v = v.replace(/\bOrgani(z|s)ed \SThugs[,\.]\S/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(z|s)ed \Sthugs[,\.]\S/g, "Organi$1ed Black people");
+    v = v.replace(/\borgani(z|s)ed \SThugs[,\.]\S/g, "organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)ed \Sthugs[,\.]\S/g, "organi$1ed black people");
     v = v.replace(/\bDangerous \SThug[,\.]\S/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug[,\.]\S/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
@@ -72,11 +72,11 @@ function replaceText(v)
     v = v.replace(/\bdangerous \SThug[,\.]\S/g, "black Person who I Am Afraid Of");
     v = v.replace(/\bdangerous \Sthug[,\.]\S/g, "black person who I am afraid of");
     
-    //here we target cases like: Organized "thugs"
-    v = v.replace(/\bOrganized \SThugs\S/g, "Organized Black People");
-    v = v.replace(/\bOrganized \Sthugs\S/g, "Organized black people");
-    v = v.replace(/\borganized \SThugs\S/g, "organized Black People");
-    v = v.replace(/\borganized \Sthugs\S/g, "organized black people");
+    //here we target cases like: Organi(z|s)ed "thugs"
+    v = v.replace(/\bOrgani(?: z|s)ed \SThugs\S/g, "Organi$1ed Black People");
+    v = v.replace(/\bOrgani(?: z|s)ed \Sthugs\S/g, "Organi$1ed black people");
+    v = v.replace(/\borgani(z|s)ed \SThugs\S/g, "organi$1ed Black People");
+    v = v.replace(/\borgani(z|s)ed \Sthugs\S/g, "organi$1ed black people");
     v = v.replace(/\bDangerous \SThug\b/g, "Black Person Who I Am Afraid Of");
     v = v.replace(/\bDangerous \Sthug\b/g, "Black person who I am afraid of");
     v = v.replace(/\bdangerous \SThug\b/g, "black Person who I Am Afraid Of");
