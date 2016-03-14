@@ -11,8 +11,8 @@ Chrome extension that replaces words that are predictably used to dehumanize peo
 - Dangerous thug -> black person who I am afraid of
 - Organized thugs -> organized black people 
 
-### Screenshots
-#### Immigration
+## Screenshots
+### Immigration
 ##### dehumanized
 ![](dehumanizedIllegals.png)
 ##### humanized
@@ -23,7 +23,7 @@ Chrome extension that replaces words that are predictably used to dehumanize peo
 ![](humanizedImmigration.png)
 
 
-#### 'Thugs'
+### 'Thugs'
 ##### dehumanized
 ![](dehumanizedDangerousThugs.png)
 ##### humanized
