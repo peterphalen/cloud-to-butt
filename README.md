@@ -1,4 +1,4 @@
-humanizer
+humanize
 =============
 
 ![](logo.png)

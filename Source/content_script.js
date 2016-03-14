@@ -28,8 +28,8 @@ function replaceText(v)
     
     
     //illegals -> humans
-    v = v.replace(/\bIllegals\b/g, "Humans");
-    v = v.replace(/\billegals\b/g, "humans");
+    v = v.replace(/\bIllegals\b/g, "Human beings");
+    v = v.replace(/\billegals\b/g, "human beings");
     
     
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
