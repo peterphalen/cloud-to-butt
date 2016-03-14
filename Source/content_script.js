@@ -62,16 +62,16 @@ function replaceText(v)
     //everything above works great. the following two blocks do not.
     
     //here I'm trying to find casese like: Organized "thugs."
-    v = v.replace(/\bOrganized .Thugs[,\.].\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized .thug[,\.].\b/g, "Organized Black people");
-    v = v.replace(/\borganized .Thugs[,\.].\b/g, "organized Black People");
-    v = v.replace(/\borganized .thug[,\.].\b/g, "organized black people");
+    v = v.replace(/\bOrganized \SThugs[,\.]\S\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized \Sthugs[,\.]\S\b/g, "Organized Black people");
+    v = v.replace(/\borganized \SThugs[,\.]\S\b/g, "organized Black People");
+    v = v.replace(/\borganized \Sthugs[,\.]\S\b/g, "organized black people");
     
     //here I'm trying to find casese like: Organized "thugs"
-    v = v.replace(/\bOrganized .Thugs['""”]\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized .thugs['""”]\b/g, "Organized black people");
-    v = v.replace(/\borganized .Thugs['""”]\b/g, "organized Black People");
-    v = v.replace(/\borganized .thugs['""”]\b/g, "organized black people");
+    v = v.replace(/\bOrganized \SThugs\S\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized \Sthugs\S\b/g, "Organized black people");
+    v = v.replace(/\borganized \SThugs\S\b/g, "organized Black People");
+    v = v.replace(/\borganized \Sthugs\S\b/g, "organized black people");
 
                   
     return v;
