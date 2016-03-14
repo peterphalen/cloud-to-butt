@@ -14,9 +14,14 @@ Chrome extension that replaces words that are predictably used to dehumanize peo
 ### Screenshots
 #### Immigration
 ##### dehumanized
+![](dehumanizedIllegals.png)
+##### humanized
+![](humanizedIllegals.png)
+##### dehumanized
 ![](dehumanizedImmigration.png)
 ##### humanized
 ![](humanizedImmigration.png)
+
 
 #### 'Thugs'
 ##### dehumanized
