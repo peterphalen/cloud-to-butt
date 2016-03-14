@@ -23,16 +23,16 @@ function handleText(textNode) {
 function replaceText(v)
 {
     
-
+    
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
     v = v.replace(/\b(Undocumented Immigrant|Undocumented immigrant|Illegal Alien|Illegal alien|Illegal Immigrant|Illegal immigrant)\b/g, "Human trying to build a better life");
     v = v.replace(/\b(undocumented Immigrant|undocumented immigrant|illegal Alien|illegal alien|illegal Immigrant|illegal immigrant)\b/g, "human trying to build a better life");
     v = v.replace(/\b(Undocumented Immigrants|Undocumented immigrants|Illegal Aliens|Illegal aliens|Illegal Immigrants|Illegal immigrants)\b/g, "Humans trying to build a better life for themselves");
     v = v.replace(/\b(undocumented Immigrants|undocumented immigrants|illegal Aliens|illegal aliens|illegal Immigrants|illegal immigrants)\b/g, "humans trying to build a better life for themselves");
-   
+    
     v = v.replace(/\bIllegals\b/g, "Humans");
     v = v.replace(/\billegals\b/g, "humans");
-
+    
     
     //illegal immigration -> humans trying to build a better life
     v = v.replace(/\bIllegal Immigration\b/g, "Humans trying to build better lives for themselves");
@@ -42,29 +42,34 @@ function replaceText(v)
 
     
     //thug -> black person i am afraid of
-    ///NOTE: NEED TO MAKE THESE WORDS RECOGNIZE WHEN ONLY ONE IS IN QUOTES (e.g. Dangerous "thugs")
-    ///This formatting occurs the most frequently
-    v = v.replace(/\bDangerous Thug\b/g, "Black Person");
-    v = v.replace(/\bDangerous thug\b/g, "Black person");
-    v = v.replace(/\bdangerous Thug\b/g, "black Person");
-    v = v.replace(/\bdangerous thug\b/g, "black person");
-    v = v.replace(/\bDangerous Thugs\b/g, "Black People");
-    v = v.replace(/\bDangerous thugs\b/g, "Black people");
-    v = v.replace(/\bdangerous Thugs\b/g, "black People");
-    v = v.replace(/\bdangerous thugs\b/g, "black people");
+    ///NOTE: NEED TO MAKE IT POSSIBLE TO RECOGNIZE THESE WORDS EVEN WHEN ONLY ONE IS IN QUOTES (e.g. Dangerous "thugs")
+    ///^This formatting occurs more frequently its unquoted counterpart
+    v = v.replace(/\bDangerous Thug\b/g, "Black Person Who I Am Afraid Of");
+    v = v.replace(/\bDangerous thug\b/g, "Black person who I am afraid of");
+    v = v.replace(/\bdangerous Thug\b/g, "black Person who I Am Afraid Of");
+    v = v.replace(/\bdangerous thug\b/g, "black person who I am afraid of");
+    v = v.replace(/\bDangerous Thugs\b/g, "Black People Who I Am Afraid Of");
+    v = v.replace(/\bDangerous thugs\b/g, "Black people who I am afraid of");
+    v = v.replace(/\bdangerous Thugs\b/g, "black People Who I am afraid of");
+    v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
     
-    v = v.replace(/\bOrganized Thug\b/g, "Organized Black Person");
-    v = v.replace(/\bOrganized thug\b/g, "Organized Black person");
-    v = v.replace(/\borganized Thug\b/g, "organized black Person");
-    v = v.replace(/\borganized thug\b/g, "organized black person");
+    v = v.replace(/\bOrganized .Thugs[,\.].\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized .thugs[,\.].\b/g, "Organized Black people");
+    v = v.replace(/\borganized .Thugs[,\.].\b/g, "organized Black People");
+    v = v.replace(/\borganized .Thug[,\.].\b/g, "organized black people");
+    
+    
+    v = v.replace(/\bOrganized .Thugs['""”]\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized .thugs['""”]\b/g, "Organized Black people");
+    v = v.replace(/\borganized .Thugs['""”]\b/g, "organized Black People");
+    v = v.replace(/\borganized .Thug['""”]\b/g, "organized black people");
+    
     v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized thugs\b/g, "Organized Black people");
-    v = v.replace(/\borganized Thugs\b/g, "organized black People");
-    v = v.replace(/\borganized thugs\b/g, "organized black people");
-
-
-	
-	return v;
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+    v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
+                  
+    return v;
 }
 
 
