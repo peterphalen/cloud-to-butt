@@ -8,7 +8,7 @@ Chrome extension that replaces words and phrases that are commonly used to dehum
 ### Decode the American language!
 - Illegals -> humans
 - Illegal alien -> human trying to build a better life
-- "Dangerous thug" -> black person
+- "Dangerous thug" -> black person `
 - "Organized thugs" -> organized black people 
 
 ### Screenshots
