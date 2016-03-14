@@ -28,8 +28,8 @@ function replaceText(v)
     
     
     //illegals -> humans
-    v = v.replace(/\bIllegals\b/g, "Human beings");
-    v = v.replace(/\billegals\b/g, "human beings");
+    v = v.replace(/\bIllegals\b/g, "Humans");
+    v = v.replace(/\billegals\b/g, "humans");
     
     
     //undocumented immigrants/illegal aliens/illegal immigrants -> humans trying to build better lives
@@ -102,6 +102,30 @@ function replaceText(v)
     v = v.replace(/\borgani(z|s)?ed \Sthugs\S/g, "organi$1ed black people");
     //clean up remaining occurrences with a case-insensitive regex call
     v = v.replace(/\borgani(z|s)?ed \Sthugs\S/i, "Organi$1ed Black People");
+    
+    
+    //welfare queens -> women receiving government aid
+    //the . between welfare and queen allows us to capture "welfare-queen"
+    v = v.replace(/\bWelfare.queen\b/g, "Woman receiving government aid");
+    v = v.replace(/\bWelfare.Queen\b/g, "Woman Receiving Government Aid");
+    v = v.replace(/\bwelfare.[Qq]ueen\b/g, "woman receiving government aid");
+    v = v.replace(/\bWelfare.queens\b/g, "Women receiving government aid");
+    v = v.replace(/\bWelfare.Queens\b/g, "Women Receiving Government Aid");
+    v = v.replace(/\bwelfare.[Qq]ueens\b/g, "women receiving government aid");
+    //clean up remaining occurrences with a case-insensitive regex call
+    v = v.replace(/\bwelfare.queen\b/i, "Woman Receiving Government Aid");
+    v = v.replace(/\bwelfare.queens\b/i, "Women Receiving Government Aid");
+              
+    //welfare mom -> poor woman providing for her children (probably can do better than this)
+    v = v.replace(/\bWelfare (Mom|Mother)\b/g, "Poor Woman Providing For Her Children");
+    v = v.replace(/\bWelfare (Moms|Mothers)\b/g, "Poor Women Providing For Their Children");
+    v = v.replace(/\bWelfare (mom|mother)\b/g, "Poor woman providing for her children");
+    v = v.replace(/\bWelfare (moms|mothers)\b/g, "Poor women providing for their children");
+    v = v.replace(/\bwelfare [Mm](om|other)\b/g, "poor woman providing for her children");
+    v = v.replace(/\bwelfare [Mm](oms|others)\b/g, "poor women providing for her children");
+    //clean up remaining occurrences with a case-insensitive regex call
+    v = v.replace(/\bwelfare (mom|mother)\b/i, "Woman Receiving Government Aid");
+    v = v.replace(/\bwelfare (moms|mothers)\b/i, "Women Receiving Government Aid");
     
     return v;
 }

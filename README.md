@@ -29,4 +29,10 @@ Chrome extension that replaces words that are predictably used to dehumanize peo
 ##### humanized
 ![](humanizedDangerousThugs.png)
 
+### Welfare queens
+##### dehumanized
+![](dehumanizedWelfareQueen.png)
+##### humanized
+![](humanizedWelfareQueen.png)
+
 
