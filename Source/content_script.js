@@ -54,16 +54,15 @@ function replaceText(v)
     v = v.replace(/\bdangerous thugs\b/g, "black people who I am afraid of");
     
     v = v.replace(/\bOrganized .Thugs[,\.].\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized .thugs[,\.].\b/g, "Organized Black people");
+    v = v.replace(/\bOrganized .thug[,\.].\b/g, "Organized Black people");
     v = v.replace(/\borganized .Thugs[,\.].\b/g, "organized Black People");
-    v = v.replace(/\borganized .Thug[,\.].\b/g, "organized black people");
-    
+    v = v.replace(/\borganized .thug[,\.].\b/g, "organized black people");
     
     v = v.replace(/\bOrganized .Thugs['""”]\b/g, "Organized Black People");
-    v = v.replace(/\bOrganized .thugs['""”]\b/g, "Organized Black people");
+    v = v.replace(/\bOrganized .thugs['""”]\b/g, "Organized black people");
     v = v.replace(/\borganized .Thugs['""”]\b/g, "organized Black People");
-    v = v.replace(/\borganized .Thug['""”]\b/g, "organized black people");
-    
+    v = v.replace(/\borganized .thugs['""”]\b/g, "organized black people");
+                                      
     v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
     v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
     v = v.replace(/\bOrganized Thugs\b/g, "Organized Black People");
