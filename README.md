@@ -12,7 +12,7 @@ Chrome extension that replaces words that are predictably used to dehumanize peo
 - Organized thugs -> organized black people 
 
 #### Download beta
-Follow [this link](https://chrome.google.com/webstore/detail/humanize/ckgiiaehnngpfmcnjmlmpedkkfnedmil?hl=en&gl=US) in Chrome to download. Currently in beta.
+Follow [this link](https://chrome.google.com/webstore/detail/humanize/ckgiiaehnngpfmcnjmlmpedkkfnedmil?hl=en&gl=US) in Chrome to download. Currently in beta. Open source.
 
 ## Screenshots
 ### Immigration
