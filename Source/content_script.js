@@ -46,41 +46,41 @@ function replaceText(v)
     v = v.replace(/\bIllegal [Ii]mmigration\b/g, "Humans trying to build better lives for themselves");
     v = v.replace(/\billegal [Ii]mmigration\b/g, "humans trying to build better lives for themselves");
     
-    //dangerous thug -> black person who i am afraid of
+    //(Dangerous|Violent) thug -> black person who i am afraid of
 
 
-    //note: in practice, these noun phrases are often used with interior quotes, as in: Dangerous "thug".
-    //Here we target occurences of the form: Dangerous "thug."
+    //note: in practice, these noun phrases are often used with interior quotes, as in: (Dangerous|Violent) "thug".
+    //Here we target occurences of the form: (Dangerous|Violent) "thug."
     // \S picks any non-white-space character
     // must drop \b because punctuation is not recognized as part of a word
-    v = v.replace(/\bDangerous \SThug[,\.]?\S/g, "Black Person Who I Am Afraid Of$1");
-    v = v.replace(/\bDangerous \Sthug[,\.]?\S/g, "Black person who I am afraid of$1");
-    v = v.replace(/\bdangerous \S[Tt]hug[,\.]?\S/g, "Black person who I am afraid of$1");
-    v = v.replace(/\bDangerous \SThug[,\.]?\S/g, "Black Person Who I Am Afraid Of$1");
-    v = v.replace(/\bDangerous \Sthug[,\.]?\S/g, "Black person who I am afraid of$1");
+    v = v.replace(/\b(Dangerous|Violent) \SThug[,\.]?\S/g, "Black Person Who I Am Afraid Of$1");
+    v = v.replace(/\b(Dangerous|Violent) \Sthug[,\.]?\S/g, "Black person who I am afraid of$1");
+    v = v.replace(/\b((dangerous|violent)|Violent) \S[Tt]hug[,\.]?\S/g, "Black person who I am afraid of$1");
+    v = v.replace(/\b(Dangerous|Violent) \SThug[,\.]?\S/g, "Black Person Who I Am Afraid Of$1");
+    v = v.replace(/\b(Dangerous|Violent) \Sthug[,\.]?\S/g, "Black person who I am afraid of$1");
     //clean up remaining occurrences of this form with a case-insensitive regex call
-    v = v.replace(/\bdangerous \Sthug[,\.]?\S/i, "Black Person Who I Am Afraid Of$1");
+    v = v.replace(/\b(dangerous|violent) \Sthug[,\.]?\S/i, "Black Person Who I Am Afraid Of$1");
 
     
     //Here we target cases of the form: Dangerous "thugs"
-    v = v.replace(/\bDangerous \SThug\S\b/g, "Black Person Who I Am Afraid Of");
-    v = v.replace(/\bDangerous \Sthug\S\b/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous \S[Tt]hug\S\b/g, "black person who I am afraid of");
-    v = v.replace(/\bDangerous \SThug(s|z)\S/g, "Black People Who I Am Afraid Of");
-    v = v.replace(/\bDangerous \Sthug(s|z)\S/g, "Black people who I am afraid of");
-    v = v.replace(/\bdangerous \SThug(s|z)\S/g, "black People Who I am afraid of");
-    v = v.replace(/\bdangerous \Sthug(s|z)\S/g, "black people who I am afraid of");
+    v = v.replace(/\b(Dangerous|Violent) \SThug\S\b/g, "Black Person Who I Am Afraid Of");
+    v = v.replace(/\b(Dangerous|Violent) \Sthug\S\b/g, "Black person who I am afraid of");
+    v = v.replace(/\b(dangerous|violent) \S[Tt]hug\S\b/g, "black person who I am afraid of");
+    v = v.replace(/\b(Dangerous|Violent) \SThug(s|z)\S/g, "Black People Who I Am Afraid Of");
+    v = v.replace(/\b(Dangerous|Violent) \Sthug(s|z)\S/g, "Black people who I am afraid of");
+    v = v.replace(/\b(dangerous|violent) \SThug(s|z)\S/g, "black People Who I am afraid of");
+    v = v.replace(/\b(dangerous|violent) \Sthug(s|z)\S/g, "black people who I am afraid of");
     //again, clean up remaining occurrences with a case-insensitive regex call
-    v = v.replace(/\bdangerous \Sthug(s|z)\S/i, "Black People Who I Am Afraid Of");
+    v = v.replace(/\b(dangerous|violent) \Sthug(s|z)\S/i, "Black People Who I Am Afraid Of");
     
-    v = v.replace(/\bDangerous Thug\b/g, "Black Person Who I Am Afraid Of");
-    v = v.replace(/\bDangerous thug\b/g, "Black person who I am afraid of");
-    v = v.replace(/\bdangerous [Tt]hug\b/g, "black person who I am afraid of");
-    v = v.replace(/\bDangerous Thug(s|z)\b/g, "Black People Who I Am Afraid Of");
-    v = v.replace(/\bDangerous thug(s|z)\b/g, "Black people who I am afraid of");
-    v = v.replace(/\bdangerous [Tt]hug(s|z)\b/g, "black people who I am afraid of");
+    v = v.replace(/\b(Dangerous|Violent) Thug\b/g, "Black Person Who I Am Afraid Of");
+    v = v.replace(/\b(Dangerous|Violent) thug\b/g, "Black person who I am afraid of");
+    v = v.replace(/\b(dangerous|violent) [Tt]hug\b/g, "black person who I am afraid of");
+    v = v.replace(/\b(Dangerous|Violent) Thug(s|z)\b/g, "Black People Who I Am Afraid Of");
+    v = v.replace(/\b(Dangerous|Violent) thug(s|z)\b/g, "Black people who I am afraid of");
+    v = v.replace(/\b(dangerous|violent) [Tt]hug(s|z)\b/g, "black people who I am afraid of");
     //clean up remaining occurrences with a case-insensitive regex call
-    v = v.replace(/\bdangerous thug(s|z)\b/i, "Black People Who I Am Afraid Of");
+    v = v.replace(/\b(dangerous|violent) thug(s|z)\b/i, "Black People Who I Am Afraid Of");
     
     //Organized thugs -> organized/organised black people
     //maintain spelling (organized v. organised)

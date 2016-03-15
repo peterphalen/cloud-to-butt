@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Humanize",
-	"version": "0.75",
+	"name": "humanize",
+	"version": "0.75.1",
 	"description": "Replaces words and phrases that are commonly used to dehumanize people with words that are more humanizing.",
     "author": "Peter Phalen",
 
