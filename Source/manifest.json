@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Humanize",
-	"version": "1.0",
-	"description": "Chrome extension that replaces words and phrases that are commonly used to dehumanize people with words that are more humanizing.",
+	"version": "0.75",
+	"description": "Replaces words and phrases that are commonly used to dehumanize people with words that are more humanizing.",
     "author": "Peter Phalen",
 
 
